@@ -40,6 +40,11 @@ header nav h1 {
   font-family: 'Sail', cursive;
   letter-spacing: 2px;
   color: blueviolet;
+  transition: 0.4s;
+}
+
+header nav h1:hover {
+  letter-spacing: 6px;
 }
 
 header nav ul {
@@ -57,9 +62,11 @@ header nav ul li a {
   text-decoration: none;
   padding: 0.2em 0.5em;
   color: black;
+  transition: 0.2s;
 }
 
 header nav ul li a:hover {
+  letter-spacing: 1px;
   color: blueviolet;
 }
 
@@ -73,7 +80,6 @@ header nav ul li a.active {
   align-items: center;
   gap: 1rem;
 }
-
 header #info h2 {
   color: blueviolet;
   font-size: 3em;
@@ -117,6 +123,16 @@ header #info #hire_me:hover {
   transition: 0.4s;
 }
 
+header #info p span {
+  font-weight: bolder;
+  color: rgb(132, 0, 255);
+  transition: 1s;
+}
+
+header #info p span:hover {
+  letter-spacing: 2px;
+}
+
 .circle {
   position: absolute;
   width: 12rem;
@@ -138,14 +154,22 @@ header #info #hire_me:hover {
 }
 
 .hepta {
-    position: absolute;
+  position: absolute;
   top: 10%;
   left: 50%;
   width: 8rem;
   height: 8rem;
   background: linear-gradient(90deg, #19d400 0%, #ecdd0a 100%);
   z-index: -1;
-    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+  clip-path: polygon(
+    50% 0%,
+    90% 20%,
+    100% 60%,
+    75% 100%,
+    25% 100%,
+    0% 60%,
+    10% 20%
+  );
 }
 
 .star {
