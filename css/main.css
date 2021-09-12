@@ -60,12 +60,12 @@ header nav ul li a {
     font-weight: bolder;
 }
 
-header nav ul li a.hover {
+header nav ul li a:hover {
     letter-spacing: 1px;
     color: white;
 }
 
-header nav ul li a:active {
+header nav ul li a.active {
     color: white;
 }
 header #info h2 {
