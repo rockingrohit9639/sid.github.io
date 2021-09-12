@@ -7,7 +7,7 @@
 }
 
 body {
-  background: linear-gradient(64.07deg, #775ada 18.6%, #ff0000 97.55%);
+  background: linear-gradient(90deg, #9796f0 0%, #fbc7d4 100%);
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
@@ -17,11 +17,12 @@ body {
 header {
   height: 100vh;
   display: block;
+  backdrop-filter: blur(10px);
 }
 
 header .glass {
   background: rgba(255, 255, 255, 0.45);
-  margin: 2em 3em;
+  margin: 2em 4em;
   padding: 1em;
   border-radius: 2em;
   min-height: 88vh;
@@ -114,6 +115,81 @@ header #info #hire_me:hover {
   background-color: rgba(0, 0, 0, 0);
   color: blueviolet;
   transition: 0.4s;
+}
+
+.circle {
+  position: absolute;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.top-left {
+  top: 10%;
+  left: 3%;
+  background: linear-gradient(90deg, #eb3349 0%, #f47d43 100%);
+}
+
+.top-right {
+  top: 20%;
+  right: 3%;
+  background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
+}
+
+.hepta {
+    position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 8rem;
+  height: 8rem;
+  background: linear-gradient(90deg, #19d400 0%, #ecdd0a 100%);
+  z-index: -1;
+    clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+}
+
+.star {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
+  z-index: -1;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+}
+
+.frame {
+  position: absolute;
+  top: 70%;
+  left: 15%;
+  width: 12rem;
+  height: 12rem;
+  background: linear-gradient(90deg, #da22ff 0%, #9733ee 100%);
+  z-index: -1;
+  clip-path: polygon(
+    0% 0%,
+    0% 100%,
+    25% 100%,
+    25% 25%,
+    75% 25%,
+    75% 75%,
+    25% 75%,
+    25% 100%,
+    100% 100%,
+    100% 0%
+  );
 }
 
 /* ------------------Media Query ( RESPONSIVENESS ) ---------------------- */
