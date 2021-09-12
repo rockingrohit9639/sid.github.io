@@ -1,117 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
-
+  background: linear-gradient(64.07deg, #775ada 18.6%, #ff0000 97.55%);
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* --------------Hero Section---------------- */
 
 header {
-    background: linear-gradient(64.07deg, #775ADA 18.6%, #FF0000 97.55%);
-    height: 600px;
-    display: inline-block;
+  height: 100vh;
+  display: block;
 }
 
 header .glass {
-        background: rgba(255,255,255,.45);
-        margin: 2em;
-        padding: 1em;
-        border-radius: 2em;
+  background: rgba(255, 255, 255, 0.45);
+  margin: 2em 3em;
+  padding: 1em;
+  border-radius: 2em;
+  min-height: 88vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px clamp(10px, 10vw, 40px);
 }
 
 header nav h1 {
-    font-size: 2rem;
-    padding:1em 0em 0em 1.5em;
-    font-family: 'Sail', cursive;
-    letter-spacing: 2px;
-    color:blueviolet;
+  font-size: 2rem;
+  font-family: 'Sail', cursive;
+  letter-spacing: 2px;
+  color: blueviolet;
 }
 
 header nav ul {
-    display: flex;
-    position: absolute;
-    right: 5em;
-    top: 3em;
+  display: flex;
+  align-items: center;
 }
 
 header nav ul li {
-    margin: 1em .5em;
-    font-size: 1em;
-    list-style-type: none;
+  margin: 1em 0.5em;
+  font-size: 1em;
+  list-style-type: none;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    padding:.2em .5em;
-    color: black;
+  text-decoration: none;
+  padding: 0.2em 0.5em;
+  color: black;
 }
 
 header nav ul li a:hover {
-    color:blueviolet;
+  color: blueviolet;
 }
 
 header nav ul li a.active {
-    color:blueviolet;
+  color: blueviolet;
+}
+
+#info {
+  padding: 10px clamp(10px, 10vw, 40px);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 header #info h2 {
-    color: blueviolet;
-    margin: 0.2em 0em 0em 1.6em;
-    font-size: 3em;
-    font-family:cursive;
+  color: blueviolet;
+  font-size: 3em;
 }
 
 header #info h1 {
-    color: red  ;
-    margin: -.3em 0em 0em 1.1em;
-    font-size: 4em;
-    font-family:cursive;
-    letter-spacing: .1em;
+  color: red;
+  font-size: 4em;
 }
 
 header #info p {
-    font-size: 1.3em;
-    color: rebeccapurple;
-    font-weight: bold ;
-    margin-left: 3.3em;
-    margin-top: .5  em;
-    width: 50%;
-    text-transform: capitalize;
+  display: block;
+  width: 80%;
+  color: rebeccapurple;
+  font-weight: normal;
+  font-size: 1rem;
+  margin-block: 1rem;
 }
 
 header #info #hire_me {
-    color: white;
-    font-size: 1.2em;
-    letter-spacing: .1em;
-    border-radius: .6em;
-    text-decoration: none;
-    background-color:rgb(43, 61, 226);
-    padding:.1em .5emrgb(46, 43, 226);
-    margin:1em 3.3em ;
-    /* position: relative;
-    top:.5em;
-    left:3.5em; */
-    padding:.4em .8em;
-    display: inline-block;
+  display: block;
+  max-width: 6rem;
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  border-radius: 0.6em;
+  text-decoration: none;
+  background-color: rgb(43, 61, 226);
+  padding: 0.4em 0.8em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.user_img {
+  max-width: 30em;
 }
 
 header #info #hire_me:hover {
-   background-color:rgba(0, 0, 0, 0);
-   color:blueviolet ;
-   transition: .4s;
-}
-
-header img {
-    max-width:27em;
-    width: 33%;
-    position: absolute;
-    top: 6.6em;
-    right: 3em;
+  background-color: rgba(0, 0, 0, 0);
+  color: blueviolet;
+  transition: 0.4s;
 }
 
 /* ------------------Media Query ( RESPONSIVENESS ) ---------------------- */
