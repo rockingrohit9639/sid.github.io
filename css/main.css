@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sail&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Gluten:wght@300&display=swap');
 * {
   margin: 0px;
   padding: 0px;
 }
 
 body {
-  background: linear-gradient(90deg, #9796f0 0%, #fbc7d4 100%);
+  background: linear-gradient(90deg, #9B3EC9 0%, #F82331 100%);
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
 }
@@ -22,10 +22,12 @@ header {
 
 header .glass {
   background: rgba(255, 255, 255, 0.45);
-  margin: 2em 4em;
   padding: 1em;
-  border-radius: 2em;
-  min-height: 88vh;
+  width: 1256px;
+  position: relative;
+  top: 76px;
+  margin: auto;
+  border-radius: 45px;
 }
 
 .nav {
@@ -37,10 +39,18 @@ header .glass {
 
 header nav h1 {
   font-size: 2rem;
-  font-family: 'Sail', cursive;
-  letter-spacing: 2px;
   color: blueviolet;
   transition: 0.4s;
+  height: 54px;
+  width: 136px;
+  position: relative;
+  left: 12px;
+  top: 16px;
+  border-radius: nullpx;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
 }
 
 header nav h1:hover {
@@ -80,23 +90,37 @@ header nav ul li a.active {
   align-items: center;
   gap: 1rem;
 }
+
 header #info h2 {
   color: blueviolet;
   font-size: 3em;
+  height: 83px;
+  width: 291px;
+  position: relative;
+  top: 27px;
+  left: 12px;
+  border-radius: nullpx;
 }
 
 header #info h1 {
   color: red;
   font-size: 4em;
+  height: 90px;
+  width: 213px;
+  position: relative;
+  left: 12px;
+  top: 0px;
+  border-radius: nullpx;
 }
 
 header #info p {
   display: block;
   width: 80%;
   color: rebeccapurple;
-  font-weight: normal;
-  font-size: 1rem;
-  margin-block: 1rem;
+  line-height: 110%;
+  font-weight: bold;
+  font-size: 1.7rem;
+  font-family: 'Gluten', cursive;
 }
 
 header #info #hire_me {
@@ -113,14 +137,14 @@ header #info #hire_me {
   margin-top: 1rem;
 }
 
-.user_img {
-  max-width: 30em;
-}
-
 header #info #hire_me:hover {
   background-color: rgba(0, 0, 0, 0);
   color: blueviolet;
   transition: 0.4s;
+}
+
+.user_img {
+  max-width: 30em;
 }
 
 header #info p span {
@@ -142,78 +166,128 @@ header #info p span:hover {
 }
 
 .top-left {
-  top: 10%;
+  top: 100PX;
   left: 3%;
   background: linear-gradient(90deg, #eb3349 0%, #f47d43 100%);
 }
 
 .top-right {
-  top: 20%;
+  top: 200PX;
   right: 3%;
   background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
 }
 
 .hepta {
   position: absolute;
-  top: 10%;
+  top: 100PX;
   left: 50%;
   width: 8rem;
   height: 8rem;
   background: linear-gradient(90deg, #19d400 0%, #ecdd0a 100%);
   z-index: -1;
-  clip-path: polygon(
-    50% 0%,
-    90% 20%,
-    100% 60%,
-    75% 100%,
-    25% 100%,
-    0% 60%,
-    10% 20%
-  );
+  clip-path: polygon( 50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
 }
 
 .star {
   position: absolute;
-  top: 70%;
+  top: 550PX;
   left: 60%;
   width: 12rem;
   height: 12rem;
   background: linear-gradient(90deg, #0052d4 0%, #4364f7 50%, #6fb1fc 100%);
   z-index: -1;
-  clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
-    39% 35%
-  );
+  clip-path: polygon( 50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 }
 
 .frame {
   position: absolute;
-  top: 70%;
+  top: 550PX;
   left: 15%;
   width: 12rem;
   height: 12rem;
   background: linear-gradient(90deg, #da22ff 0%, #9733ee 100%);
   z-index: -1;
-  clip-path: polygon(
-    0% 0%,
-    0% 100%,
-    25% 100%,
-    25% 25%,
-    75% 25%,
-    75% 75%,
-    25% 75%,
-    25% 100%,
-    100% 100%,
-    100% 0%
-  );
+  clip-path: polygon( 0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
 }
 
 /* ------------------Media Query ( RESPONSIVENESS ) ---------------------- */
+
+/* --------------------------  section two  ------------------------------ */
+
+.story {
+  margin: 2em;
+  display: inline-block;
+}
+
+.story h1 {
+  text-align: center;
+  color: white;
+  margin: 1em;
+}
+
+.story .para {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 32px;
+  padding: 1em;
+  font-size: 2em;
+  background-color: rgba(255, 255, 255, .35);
+  margin: 1em;
+  width: 70%;
+}
+
+.story #left {
+  float: left;
+}
+
+.story #right {
+  float: right;
+}
+
+/* ---------------  contact me section  ------------------ */
+
+.contactme {
+  border: 2px solid rgb(243, 178, 0);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  margin: 100px;
+}
+
+.contactme .box {
+  grid-area: 1 / 1 / 5 / 3;
+  border: 2px solid #ffbb00;
+    margin: 30px;
+    font-size: 2.5em;
+    /* width: 50%; */
+
+}
+
+.contactme .name {
+  grid-area: 1 / 4 / 2 / 6;
+  border: 2px solid rgb(243, 178, 0);
+    margin: 30px;
+
+
+}
+
+.contactme .email {
+  grid-area: 2 / 4 / 3 / 6;
+  border: 2px solid rgb(243, 178, 0);
+    margin: 30px;
+
+
+}
+
+.contactme .msg {
+
+  border: 2px solid rgb(243, 178, 0);
+    margin: 30px;
+
+  grid-area: 3 / 4 / 5 / 6;
+}
+
+.copyright  {
+  background-image: url('../img/Vector.svg');
+}
