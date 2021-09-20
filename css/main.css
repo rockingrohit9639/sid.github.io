@@ -41,12 +41,6 @@ header nav h1 {
   font-size: 2rem;
   color: blueviolet;
   transition: 0.4s;
-  height: 54px;
-  width: 136px;
-  position: relative;
-  left: 12px;
-  top: 16px;
-  border-radius: nullpx;
   font-style: normal;
   font-weight: 700;
   line-height: 54px;
@@ -94,23 +88,11 @@ header nav ul li a.active {
 header #info h2 {
   color: blueviolet;
   font-size: 3em;
-  height: 83px;
-  width: 291px;
-  position: relative;
-  top: 27px;
-  left: 12px;
-  border-radius: nullpx;
 }
 
 header #info h1 {
   color: red;
   font-size: 4em;
-  height: 90px;
-  width: 213px;
-  position: relative;
-  left: 12px;
-  top: 0px;
-  border-radius: nullpx;
 }
 
 header #info p {
@@ -118,9 +100,8 @@ header #info p {
   width: 80%;
   color: rebeccapurple;
   line-height: 110%;
-  font-weight: bold;
-  font-size: 1.7rem;
-  font-family: 'Gluten', cursive;
+  font-weight: normal;
+  font-size: 1.5rem;
 }
 
 header #info #hire_me {
@@ -129,17 +110,16 @@ header #info #hire_me {
   color: white;
   font-size: 1.2em;
   letter-spacing: 0.1em;
-  border-radius: 0.6em;
+  border-radius: 0.5em;
   text-decoration: none;
-  background-color: rgb(43, 61, 226);
+  background: linear-gradient(266.11deg, #775ADA 5.37%, #434AF4 99.07%);
   padding: 0.4em 0.8em;
   text-align: center;
   margin-top: 1rem;
 }
 
 header #info #hire_me:hover {
-  background-color: rgba(0, 0, 0, 0);
-  color: blueviolet;
+  color: rgb(0, 0, 0);
   transition: 0.4s;
 }
 
@@ -151,6 +131,7 @@ header #info p span {
   font-weight: bolder;
   color: rgb(132, 0, 255);
   transition: 1s;
+  margin-top: 0.5rem;
 }
 
 header #info p span:hover {
