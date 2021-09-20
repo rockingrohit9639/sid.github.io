@@ -245,47 +245,53 @@ header #info p span:hover {
 
 /* ---------------  contact me section  ------------------ */
 
+.titleBox {
+  margin: 20px;
+  color: #fff;
+}
+
 .contactme {
-  border: 2px solid rgb(243, 178, 0);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  display: flex;
   margin: 100px;
+  gap: 8rem;
+  align-items: self-start;
 }
 
-.contactme .box {
-  grid-area: 1 / 1 / 5 / 3;
-  border: 2px solid #ffbb00;
-    margin: 30px;
-    font-size: 2.5em;
-    /* width: 50%; */
-
+.contactme .box{
+  color: #220096;
+  background: rgba(255, 255, 255, 0.37);
+  padding: 20px;
+  font-size: 2.5em;
+  border: 2px solid #fff;
+  flex: 40%;
 }
 
-.contactme .name {
-  grid-area: 1 / 4 / 2 / 6;
-  border: 2px solid rgb(243, 178, 0);
-    margin: 30px;
-
-
+.form_contact {
+  flex: 60%;
 }
 
-.contactme .email {
-  grid-area: 2 / 4 / 3 / 6;
-  border: 2px solid rgb(243, 178, 0);
-    margin: 30px;
-
-
+.input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.322);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.911);
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+  min-height: 2rem;
+  color: #FFF;
+  font-family: "Poppins", sans-serif;
 }
 
-.contactme .msg {
-
-  border: 2px solid rgb(243, 178, 0);
-    margin: 30px;
-
-  grid-area: 3 / 4 / 5 / 6;
+.submitBtn {
+  border: 2px solid #FFF;
+  border-radius: 0;
+  outline: none;
+  background: rgba(255, 255, 255, 0.459);
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
 }
 
 .copyright  {
