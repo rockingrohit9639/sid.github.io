@@ -15,13 +15,9 @@ body {
 
 /* --------------Hero Section---------------- */
 
-header {
-  height: 100vh;
-  display: block;
-  backdrop-filter: blur(10px);
-}
 
-header .glass {
+
+ .glass {
   background: rgba(255, 255, 255, 0.45);
   padding: 1em;
   width: 90vw;
@@ -31,6 +27,7 @@ header .glass {
   margin: auto;
   border-radius: 45px;
   overflow: hidden;
+  backdrop-filter: blur(15px);
 }
 
 .nav {
@@ -40,7 +37,7 @@ header .glass {
   padding: 10px clamp(10px, 10vw, 40px);
 }
 
-header nav h1 {
+ nav h1 {
   font-size: 2rem;
   color: blueviolet;
   transition: 0.4s;
@@ -50,34 +47,34 @@ header nav h1 {
   letter-spacing: 0em;
 }
 
-header nav h1:hover {
+ nav h1:hover {
   letter-spacing: 6px;
 }
 
-header nav ul {
+ nav ul {
   display: flex;
   align-items: center;
 }
 
-header nav ul li {
+ nav ul li {
   margin: 1em 0.5em;
   font-size: 1em;
   list-style-type: none;
 }
 
-header nav ul li a {
+ nav ul li a {
   text-decoration: none;
   padding: 0.2em 0.5em;
   color: black;
   transition: 0.2s;
 }
 
-header nav ul li a:hover {
+ nav ul li a:hover {
   letter-spacing: 1px;
   color: blueviolet;
 }
 
-header nav ul li a.active {
+ nav ul li a.active {
   color: blueviolet;
 }
 
@@ -88,17 +85,17 @@ header nav ul li a.active {
   gap: 1rem;
 }
 
-header #info h2 {
+ #info h2 {
   color: blueviolet;
   font-size: 3em;
 }
 
-header #info h1 {
+ #info h1 {
   color: red;
   font-size: 4em;
 }
 
-header #info p {
+ #info p {
   display: block;
   width: 80%;
   color: rebeccapurple;
@@ -107,7 +104,7 @@ header #info p {
   font-size: 1.5rem;
 }
 
-header #info #hire_me {
+ #info #hire_me {
   display: block;
   max-width: 8rem;
   color: white;
@@ -121,7 +118,7 @@ header #info #hire_me {
   margin-top: 1rem;
 }
 
-header #info #hire_me:hover {
+ #info #hire_me:hover {
   color: rgb(0, 0, 0);
   transition: 0.4s;
 }
@@ -130,14 +127,14 @@ header #info #hire_me:hover {
   max-width: 30em;
 }
 
-header #info p span {
+ #info p span {
   font-weight: bolder;
   color: rgb(132, 0, 255);
   transition: 1s;
   margin-top: 0.5rem;
 }
 
-header #info p span:hover {
+ #info p span:hover {
   letter-spacing: 2px;
 }
 
@@ -199,7 +196,10 @@ header #info p span:hover {
 /* --------------------------  section two  ------------------------------ */
 
 .story {
-  margin: 2em;
+  margin-top: 5rem;
+  margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   display: inline-block;
 }
 
@@ -289,7 +289,7 @@ header #info p span:hover {
     text-align: center;
   }
 
-  header #info p {
+   #info p {
     width: 100%;
   }
 
@@ -297,10 +297,6 @@ header #info p span:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .story {
-    margin-top: 45vh;
   }
 
   .user_img {
@@ -317,19 +313,46 @@ header #info p span:hover {
 }
 
 @media only screen and (max-width: 700px) {
-  .story {
-    margin-top: 65vh;
-  }
-
-  header nav h1 {
+   nav h1 {
     font-size: 1.5em;
   }
 
-  header nav ul li a {
+   nav ul li a {
     font-size: 0.7em;
   }
 
   .star {
     display: none;
+  }
+}
+
+/*animations */
+.text-focus-in {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }
