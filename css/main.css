@@ -7,10 +7,15 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(90deg, #9B3EC9 0%, #F82331 100%);
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
+  overflow: hidden;
 }
 
 /* --------------Hero Section---------------- */
@@ -21,9 +26,9 @@ body {
   background: rgba(255, 255, 255, 0.45);
   padding: 1em;
   width: 90vw;
-  min-height: 80vh;
+  min-height: 90vh;
   position: relative;
-  top: 76px;
+  top: 50px;
   margin: auto;
   border-radius: 45px;
   overflow: hidden;
@@ -191,6 +196,38 @@ body {
   clip-path: polygon( 0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
 }
 
+.commonShape {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  border-radius: 1rem;
+  border: 2px solid #FFF;
+  background: #ffffff59;
+  transform: rotate(45deg);
+  box-shadow: 0 10px 12px -5px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.element-1 {
+  top: 5%;
+  right: -25%;
+}
+
+.element-2 {
+  top: 27%;
+  left: -25%;
+}
+
+.element-3 {
+  top: 48%;
+  right: -25%;
+}
+
+.element-4 {
+  top: 75%;
+  left: -25%;
+}
+
 /* ------------------Media Query ( RESPONSIVENESS ) ---------------------- */
 
 /* --------------------------  section two  ------------------------------ */
@@ -201,6 +238,7 @@ body {
   margin-left: 2em;
   margin-right: 2em;
   display: inline-block;
+  position: relative;
 }
 
 .story h1 {
@@ -211,12 +249,13 @@ body {
 
 .story .para {
   border: 2px solid rgb(255, 255, 255);
-  border-radius: 32px;
+  border-radius: 10px;
   padding: 1em;
-  font-size: 2em;
-  background-color: rgba(255, 255, 255, .35);
+  font-size: 1.3em;
+  background: rgba(255, 255, 255, 0.8);
   margin: 1em;
   width: 70%;
+  filter: drop-shadow(-23px -11px 58px rgba(0, 0, 0, 0.2));
 }
 
 .story #left {
@@ -313,46 +352,25 @@ body {
 }
 
 @media only screen and (max-width: 700px) {
-   nav h1 {
+  nav h1 {
     font-size: 1.5em;
   }
 
    nav ul li a {
-    font-size: 0.7em;
+     font-size: 0.7em;
   }
 
   .star {
     display: none;
   }
+  
+  .story .para {
+    font-size: 1rem;
+  }
 }
 
-/*animations */
-.text-focus-in {
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-          animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-}
-
-@-webkit-keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-@keyframes text-focus-in {
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
+@media only screen and (max-width: 700px) {
+  .story .para {
+    font-size: 0.8rem;
   }
 }
