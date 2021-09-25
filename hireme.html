@@ -6,13 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/hireme.css" />
+
+    <!-- fontawesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
+      integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
-
-    <nav class="navbar">
+    <nav class="navbar padding">
       <h1>Siddarth</h1>
-      <ul>
+      <ul class="desktop-nav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#sec_one">Services</a></li>
+        <li><a href="#sec_two">Work</a></li>
+        <li><a href="#sec_last">Contact Me</a></li>
+      </ul>
+
+      <i class="fas fa-bars" id="menu-icon"></i>
+
+      <ul class="mobile-nav" id="menu">
+        <i class="fas fa-times" id="close-icon"></i>
         <li><a href="./index.html">Home</a></li>
         <li><a href="#sec_one">Services</a></li>
         <li><a href="#sec_two">Work</a></li>
@@ -22,32 +48,45 @@
 
     <div id="sec_one">
       <div class="services">
-        <h1>Services</h1>
+        <h1 class="padding-2">Services</h1>
         <hr />
       </div>
 
-      <div class="container">
+      <div class="container padding-2">
         <h1 class="box" id="i">Video Editing</h1>
-
         <h1 class="box" id="ii">Voice Overs</h1>
-
         <h1 class="box" id="iii">Script Writing</h1>
-
         <h1 class="box" id="vi">Content Writing</h1>
-
         <h1 class="box" id="iv">Thumbnails</h1>
-
         <h1 class="box" id="v">Seo Description</h1>
+        <h1 class="box" id="v">Graphic Designers</h1>
+        <h1 class="box" id="v">Handle Youtube</h1>
       </div>
     </div>
 
     <div id="sec_two">
       <div class="services">
-        <h1>Our Productoins</h1>
+        <h1 class="padding-2">Our Productoins</h1>
         <hr />
       </div>
 
-      <div class="vid">
+      <div class="vid margin">
+        <iframe
+          src="https://www.youtube.com/embed/D2Sqh6d8oc8"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        >
+        </iframe>
+        <div class="vid2">
+          <h3>Video Title</h3>
+          <p>Little bit info about video</p>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="vid margin">
         <iframe
           width="648"
           height="478"
@@ -65,25 +104,7 @@
         </div>
       </div>
 
-      <div class="vid">
-        <iframe
-          width="648"
-          height="478"
-          src="https://www.youtube.com/embed/D2Sqh6d8oc8"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        >
-        </iframe>
-        <div class="vid2">
-          <h3>Video Title</h3>
-          <p>Little bit info about video</p>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="vid">
+      <div class="vid margin">
         <iframe
           width="648"
           height="478"
@@ -104,11 +125,11 @@
 
     <div id="sec_last">
       <div class="titleBox">
-        <h1>Contact with Me</h1>
+        <h1 class="padding-2">Contact with Me</h1>
         <hr />
       </div>
       <div class="contactme">
-        <div class="box">
+        <div class="box-c">
           <h1>Let's start working together</h1>
         </div>
 
@@ -136,5 +157,7 @@
       <img src="./img/wave.png" alt="wave" />
       <p>Copyright &copy; 2021 Sid</p>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/hireme.js"></script>
   </body>
 </html>
