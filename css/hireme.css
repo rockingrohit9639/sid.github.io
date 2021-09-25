@@ -8,6 +8,8 @@
 body {
   background: linear-gradient(90deg, #9c3ec7 0%, #f62434 100%);
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .padding {
