@@ -36,8 +36,6 @@ body {
   background-color: white;
   box-shadow: 0px 7px 20px 0px #00000040;
   height: 5rem;
-  position: fixed;
-  top: 0px;
 }
 
 nav h1 {
@@ -71,13 +69,13 @@ nav h1 {
 .sec_start {
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: calc(100vh - 6rem);
 }
 
 .line_one {
   display: inline-block;
   flex: 50%;
-  margin: 5em 0em 0em 5em;
+  margin: 0em 0em 0em 5em;
 }
 
 .line_one h1 {
@@ -346,6 +344,10 @@ nav h1 {
 
   .sec_start {
     flex-direction: column;
+  }
+
+  .line_one {
+    margin: 3em 0 0 2em;
   }
 }
 
