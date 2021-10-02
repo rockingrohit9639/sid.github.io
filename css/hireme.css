@@ -5,15 +5,14 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
-
 body {
   background: linear-gradient(90deg, #9c3ec7 0%, #f62434 100%);
   font-family: 'Poppins', sans-serif;
-  overflow-x: hidden;
   scroll-behavior: smooth;
+}
+
+.xHidden {
+  overflow-x: hidden;
 }
 
 .padding {
@@ -28,6 +27,10 @@ body {
   margin: 2rem clamp(1rem, 12vw, 5rem);
 }
 
+.mt-2 {
+  margin-top: 2em;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -36,6 +39,9 @@ body {
   background-color: white;
   box-shadow: 0px 7px 20px 0px #00000040;
   height: 5rem;
+  position: sticky;
+  left: 0;
+  top: 0;
 }
 
 nav h1 {
