@@ -397,6 +397,10 @@ nav ul li a.active {
 }
 
 @media only screen and (max-width: 700px) {
+  .nav {
+    padding: 10px clamp(5px, 8vw, 15px);
+  }
+  
   nav h1 {
     font-size: 1.5em;
   }
