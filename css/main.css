@@ -51,7 +51,7 @@ nav h1 {
 }
 
 nav h1:hover {
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 nav ul {
@@ -122,8 +122,10 @@ nav ul li a.active {
 }
 
 #info #hire_me:hover {
-  color: rgb(0, 0, 0);
-  transition: 0.4s;
+  color: blue;
+  background: white;
+  transition: 0.2s;
+  font-weight: 900;
 }
 
 .user_img {
