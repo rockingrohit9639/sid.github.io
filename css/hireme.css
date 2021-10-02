@@ -233,6 +233,7 @@ transform: scale(1.2);
   width: 90%;
   margin: 50px auto;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .channel a {
