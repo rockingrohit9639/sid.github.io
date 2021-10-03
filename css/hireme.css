@@ -5,10 +5,29 @@
   box-sizing: border-box;
 }
 
+/* color schemes  */
+/* light mode  */
+html[theme='light'] {
+  --primary-bg: linear-gradient(90deg, #9c3ec7 0%, #f62434 100%);
+  --secondary-dark: rgba(255, 255, 255, 0.45);
+  --primary-color: blueviolet;
+  --secondary-color: rgba(255, 255, 255, 0.61);
+  --nav-color: #000;
+}
+/* dark mode  */
+html[theme='dark'] {
+  --primary-bg: #04101a;
+  --secondary-dark: #00000061;
+  --primary-color: #ff4c29;
+  --secondary-color: #fff;
+  --nav-color: #fff;
+}
+
 body {
-  background: linear-gradient(90deg, #9c3ec7 0%, #f62434 100%);
+  background: var(--primary-bg);
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  transition: all 0.5s ease-in-out;
 }
 
 .xHidden {
@@ -31,6 +50,42 @@ body {
   margin-top: 2em;
 }
 
+.switchSmall {
+  display: inline-block;
+}
+.switchSmall input {
+  display: none;
+}
+.switchSmall small {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  background: #455a64;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.switchSmall small:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+  box-shadow: -3px 0 3px rgba(0, 0, 0, 0.1);
+}
+.switchSmall input:checked ~ small {
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+.switchSmall input:checked ~ small:before {
+  transform: translate(16px, 0px);
+  transition: 0.3s;
+}
+
 .navbar {
   width: 100%;
   display: flex;
@@ -45,7 +100,7 @@ body {
 }
 
 nav h1 {
-  transition:0.3s ease;
+  transition: 0.3s ease;
   font-size: 2em;
 }
 
@@ -109,7 +164,7 @@ nav h1 a {
   padding: 2px 20px;
   text-decoration: none;
   transition: 0.4s;
-  box-shadow: 0px 7px 20px 0px #ff00f240;
+  box-shadow: 0px 7px 20px 0px #99331465;
   margin-bottom: 4em;
 }
 
@@ -141,15 +196,15 @@ nav h1 a {
   text-align: center;
   margin-top: 2em;
   font-size: 3em;
-  color:  #008cff   ;
-  transition: transform .3s ease;
+  color: #008cff;
+  transition: transform 0.3s ease;
 }
 .our a:hover {
   color: rgb(45, 255, 220);
 }
 
 .our:hover {
-transform: scale(1.2);
+  transform: scale(1.2);
 }
 
 .our a {
@@ -157,7 +212,7 @@ transform: scale(1.2);
 }
 
 .our_hr {
-  margin-inline: 30%  ;
+  margin-inline: 30%;
   border-color: #008cff;
 }
 
@@ -165,7 +220,6 @@ transform: scale(1.2);
   color: white;
   font-size: 2em;
 }
-
 
 .Productoins hr {
   color: white;
@@ -182,7 +236,7 @@ transform: scale(1.2);
 
 .box {
   width: 300px;
-  background: rgba(255, 255, 255, 0.61);
+  background: var(--secondary-color);
   padding: 20px;
   border: 2px solid #ffffff;
   font-size: 1.5em;
@@ -190,7 +244,7 @@ transform: scale(1.2);
 
 .vid {
   height: 423px;
-  background: rgba(255, 255, 255, 0.63);
+  background: var(--secondary-color);
   border: 2px solid #ffffff;
   display: flex;
 }
@@ -244,13 +298,12 @@ transform: scale(1.2);
   border: 3px solid linear-gradient(90deg, #9c3ec7 0%, #f62434 100%);
   border-radius: 1em;
   width: 15em;
-  transition: transform 0.2s ease ;
+  transition: transform 0.2s ease;
 }
 .channel a img:hover {
   transform: scale(1.3);
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
-
 
 /* ---------------  contact me section  ------------------ */
 

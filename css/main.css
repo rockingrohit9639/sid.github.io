@@ -11,17 +11,71 @@ html {
   overflow-x: hidden;
 }
 
+/* color schemes  */
+/* light mode  */
+html[theme='light'] {
+  --primary-bg: linear-gradient(90deg, #9b3ec9 0%, #f82331 100%);
+  --secondary-dark: rgba(255, 255, 255, 0.45);
+  --primary-color: blueviolet;
+  --secondary-color: red;
+  --nav-color: #000;
+}
+/* dark mode  */
+html[theme='dark'] {
+  --primary-bg: #04101a;
+  --secondary-dark: #00000061;
+  --primary-color: #ff4c29;
+  --secondary-color: blueviolet;
+  --nav-color: #fff;
+}
+
 body {
-  background: linear-gradient(90deg, #9b3ec9 0%, #f82331 100%);
+  background: var(--primary-bg);
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
   overflow: hidden;
+  transition: 0.5s all ease-in-out;
 }
 
 /* --------------Hero Section---------------- */
+.switchSmall {
+  display: inline-block;
+}
+.switchSmall input {
+  display: none;
+}
+.switchSmall small {
+  display: inline-block;
+  width: 32px;
+  height: 16px;
+  background: #455a64;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+}
+.switchSmall small:before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+  transition: 0.3s;
+  box-shadow: -3px 0 3px rgba(0, 0, 0, 0.1);
+}
+.switchSmall input:checked ~ small {
+  background: var(--primary-color);
+  transition: 0.3s;
+}
+.switchSmall input:checked ~ small:before {
+  transform: translate(16px, 0px);
+  transition: 0.3s;
+}
 
 .glass {
-  background: rgba(255, 255, 255, 0.45);
+  background: var(--secondary-dark);
   padding: 1em;
   width: 90vw;
   min-height: 90vh;
@@ -42,7 +96,7 @@ body {
 
 nav h1 {
   font-size: 2rem;
-  color: blueviolet;
+  color: var(--primary-color);
   transition: 0.4s;
   font-style: normal;
   font-weight: 700;
@@ -68,17 +122,17 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   padding: 0.2em 0.5em;
-  color: black;
+  color: var(--nav-color);
   transition: 0.2s;
 }
 
 nav ul li a:hover {
   letter-spacing: 1px;
-  color: blueviolet;
+  color: var(--primary-color);
 }
 
 nav ul li a.active {
-  color: blueviolet;
+  color: var(--primary-color);
 }
 
 #info {
@@ -89,19 +143,19 @@ nav ul li a.active {
 }
 
 #info h2 {
-  color: blueviolet;
+  color: var(--primary-color);
   font-size: 3em;
 }
 
 #info h1 {
-  color: red;
+  color: var(--secondary-color);
   font-size: 4em;
 }
 
 #info p {
   display: block;
   width: 80%;
-  color: rebeccapurple;
+  color: var(--primary-color);
   line-height: 110%;
   font-weight: normal;
   font-size: 1.5rem;
@@ -134,7 +188,7 @@ nav ul li a.active {
 
 #info p span {
   font-weight: bolder;
-  color: rgb(132, 0, 255);
+  color: var(--primary-color);
   transition: 1s;
   margin-top: 0.5rem;
 }
@@ -317,7 +371,7 @@ nav ul li a.active {
 }
 
 .contactme .box {
-  color: #220096;
+  color: var(--primary-color);
   background: rgba(255, 255, 255, 0.37);
   padding: 20px;
   font-size: 2.5em;

@@ -19,8 +19,24 @@ closeIcon.addEventListener("click", () =>
     menu.classList.remove("open");
 })
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
+links.forEach(link =>
+{
+    link.addEventListener("click", () =>
+    {
         menu.classList.toggle("open");
     });
 })
+
+const toggleTheme = document.querySelector("#toggleTheme");
+const html = document.querySelector("html");
+toggleTheme.addEventListener("change", (e) =>
+{
+    if (e.target.checked)
+    {
+        html.setAttribute("theme", "dark");
+    }
+    else
+    {
+        html.setAttribute("theme", "light");
+    }
+});
