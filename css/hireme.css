@@ -50,6 +50,10 @@ body {
   margin-top: 2em;
 }
 
+.m-lt {
+  margin: 10px 30px;
+}
+
 .switchSmall {
   display: inline-block;
 }

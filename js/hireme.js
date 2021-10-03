@@ -40,3 +40,16 @@ toggleTheme.addEventListener("change", (e) =>
         html.setAttribute("theme", "light");
     }
 });
+
+const toggleTheme1 = document.querySelector("#toggleTheme1");
+toggleTheme1.addEventListener("change", (e) =>
+{
+    if (e.target.checked)
+    {
+        html.setAttribute("theme", "dark");
+    }
+    else
+    {
+        html.setAttribute("theme", "light");
+    }
+});
