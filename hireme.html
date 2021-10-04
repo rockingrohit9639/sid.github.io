@@ -1,118 +1,107 @@
 <!DOCTYPE html>
 <html lang="en" theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Siddarth | About</title>
-    <link rel="stylesheet" href="css/hireme.css" />
 
-    <!-- fontawesome cdn  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
-      integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <title>Siddarth | About</title>
+  <link rel="stylesheet" href="css/hireme.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+  <!-- fontawesome cdn  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/fontawesome.min.css"
+    integrity="sha512-Rcr1oG0XvqZI1yv1HIg9LgZVDEhf2AHjv+9AuD1JXWGLzlkoKDVvE925qySLcEywpMAYA/rkg296MkvqBF07Yw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- aos  -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <body>
-    <nav class="navbar padding xHidden">
-      <h1><a href="index.html"> Siddarth </a></h1>
-      <ul class="desktop-nav">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#sec_one">Services</a></li>
-        <li><a href="#sec_two">Work</a></li>
-        <li><a href="#sec_last">Contact Me</a></li>
-        <label class="switchSmall m5">
-          <input type="checkbox" id="toggleTheme" />
-          <small></small>
-        </label>
-      </ul>
+  <!-- aos  -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
 
-      <i class="fas fa-bars" id="menu-icon"></i>
+<body>
+  <nav class="navbar padding xHidden">
+    <h1><a href="index.html"> Siddarth </a></h1>
+    <ul class="desktop-nav">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="#sec_one">Services</a></li>
+      <li><a href="#sec_two">Work</a></li>
+      <li><a href="#sec_last">Contact Me</a></li>
+      <label class="switchSmall m5">
+        <input type="checkbox" id="toggleTheme" />
+        <small></small>
+      </label>
+    </ul>
 
-      <ul class="mobile-nav" id="menu">
-        <i class="fas fa-times" id="close-icon"></i>
-        <li><a class="mobile-link" href="./index.html">Home</a></li>
-        <li><a class="mobile-link" href="#sec_one">Services</a></li>
-        <li><a class="mobile-link" href="#sec_two">Work</a></li>
-        <li><a class="mobile-link" href="#sec_last">Contact Me</a></li>
-        <label class="switchSmall m5 m-lt">
-          <input type="checkbox" id="toggleTheme1" />
-          <small></small>
-        </label>
-      </ul>
-    </nav>
+    <i class="fas fa-bars" id="menu-icon"></i>
 
-    <div class="sec_start xHidden">
-      <div class="line_one">
-        <h1>See what we had done...</h1>
-        <a href="#sec_one">Services</a>
-      </div>
-      <div class="img">
-        <img src="./img/image.png" alt="" />
+    <ul class="mobile-nav" id="menu">
+      <i class="fas fa-times" id="close-icon"></i>
+      <li><a class="mobile-link" href="./index.html">Home</a></li>
+      <li><a class="mobile-link" href="#sec_one">Services</a></li>
+      <li><a class="mobile-link" href="#sec_two">Work</a></li>
+      <li><a class="mobile-link" href="#sec_last">Contact Me</a></li>
+      <label class="switchSmall m5 m-lt">
+        <input type="checkbox" id="toggleTheme1" />
+        <small></small>
+      </label>
+    </ul>
+  </nav>
+
+  <div class="sec_start xHidden">
+    <div class="line_one">
+      <h1>See what we had done...</h1>
+      <a href="#sec_one">Services</a>
+    </div>
+    <div class="img">
+      <img src="./img/image.png" alt="" />
+    </div>
+  </div>
+
+  <div id="sec_one" class="xHidden">
+    <div class="services zindex" data-aos="fade-up">
+      <h1 class="padding-2 zindex mt-2">Services</h1>
+      <hr class="zindex" />
+    </div>
+
+    <div class="container padding-2 zindex">
+      <h1 class="box zindex" data-aos="fade-left" id="i">Video Editing</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="ii">Voice Overs</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="iii">Script Writing</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="vi">Content Writing</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="iv">Thumbnails</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="v">Seo Description</h1>
+      <h1 class="box zindex" data-aos="fade-left" id="v">
+        Graphic Designers
+      </h1>
+      <h1 class="box zindex" data-aos="fade-left" id="v">Handle Youtube</h1>
+    </div>
+  </div>
+
+  <h1 class="our"><a href="#sec_two"> Our Productions </a></h1>
+  <hr class="our_hr" />
+
+  <div id="sec_two" class="xHidden">
+    <div class="Productoins" data-aos="fade-up">
+      <h1 class="padding-2 mt-2">Football</h1>
+      <hr />
+    </div>
+
+    <div class="vid margin" data-aos="fade-right">
+      <iframe width="664" height="374" src="https://www.youtube.com/embed/svgecwH-FCU" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="vid2">
+        <h3>Top 10 Incredible Goals Of The Season</h3>
+        <div class="line"></div>
       </div>
     </div>
 
-    <div id="sec_one" class="xHidden">
-      <div class="services zindex" data-aos="fade-up">
-        <h1 class="padding-2 zindex mt-2">Services</h1>
-        <hr class="zindex" />
-      </div>
-
-      <div class="container padding-2 zindex">
-        <h1 class="box zindex" data-aos="fade-left" id="i">Video Editing</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="ii">Voice Overs</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="iii">Script Writing</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="vi">Content Writing</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="iv">Thumbnails</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="v">Seo Description</h1>
-        <h1 class="box zindex" data-aos="fade-left" id="v">
-          Graphic Designers
-        </h1>
-        <h1 class="box zindex" data-aos="fade-left" id="v">Handle Youtube</h1>
-      </div>
-    </div>
-
-    <h1 class="our"><a href="#sec_two"> Our Productions </a></h1>
-    <hr class="our_hr" />
-
-    <div id="sec_two" class="xHidden">
-      <div class="Productoins" data-aos="fade-up">
-        <h1 class="padding-2 mt-2">Football</h1>
-        <hr />
-      </div>
-
-      <div class="vid margin" data-aos="fade-right">
-        <iframe
-          width="664"
-          height="374"
-          src="https://www.youtube.com/embed/svgecwH-FCU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div class="vid2">
-          <h3>Top 10 Incredible Goals Of The Season</h3>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <!-- <div class="vid margin" data-aos="fade-left">
+    <!-- <div class="vid margin" data-aos="fade-left">
       <iframe width="791" height="445" src="https://www.youtube.com/embed/AxrJyfG1G2k" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
@@ -122,153 +111,108 @@
       </div>
     </div> -->
 
-      <div class="Productoins" data-aos="fade-up">
-        <h1 class="padding-2 mt-2">Motivation</h1>
-        <hr />
-      </div>
-
-      <div class="vid margin" data-aos="fade-right  ">
-        <iframe
-          width="648"
-          height="365"
-          src="https://www.youtube.com/embed/QTZnFn8hCzw"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div class="vid2">
-          <h3>
-            Strive To Become 1% Better EVERY DAY | Jordan Peterson Motivation
-          </h3>
-          <div class="line"></div>
-        </div>
-      </div>
-      <div class="Productoins" data-aos="fade-up">
-        <h1 class="padding-2 mt-2">Tech</h1>
-        <hr />
-      </div>
-
-      <div class="vid margin" data-aos="fade-right  ">
-        <iframe
-          width="875"
-          height="492"
-          src="https://www.youtube.com/embed/BU1kcLA4Gok"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div class="vid2">
-          <h3>How Big Is Amazon?</h3>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="vid margin" data-aos="fade-right  ">
-        <iframe
-          width="875"
-          height="492"
-          src="https://www.youtube.com/embed/KJYsStJqD34"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-        <div class="vid2">
-          <h3>Inside Apple's New $5 Billion HQ</h3>
-          <div class="line"></div>
-        </div>
-      </div>
-    </div>
-
     <div class="Productoins" data-aos="fade-up">
-      <h1 class="padding-2 mt-2">Top Channels I worked with</h1>
+      <h1 class="padding-2 mt-2">Motivation</h1>
       <hr />
     </div>
 
-    <div class="channel">
-      <a href="https://www.youtube.com/c/MagnatesMedia/featured"
-        ><img src="img/c1.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/user/arunsyadav89"
-        ><img src="img/c2.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UCb2XyfhqioxBd9BlADBZUGQ"
-        ><img src="img/c3.png" alt=""
-      /></a>
+    <div class="vid margin" data-aos="fade-right  ">
+      <iframe width="648" height="365" src="https://www.youtube.com/embed/QTZnFn8hCzw" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="vid2">
+        <h3>
+          Strive To Become 1% Better EVERY DAY | Jordan Peterson Motivation
+        </h3>
+        <div class="line"></div>
+      </div>
     </div>
-
     <div class="Productoins" data-aos="fade-up">
-      <h1 class="padding-2 mt-2">Luxury & Music Channels</h1>
+      <h1 class="padding-2 mt-2">Tech</h1>
       <hr />
     </div>
 
-    <div class="channel">
-      <a href="https://www.youtube.com/channel/UCU5KHiTrq0_yxrt_e24SFaQ"
-        ><img src="img/c4.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UCcjpspS1p5VPjkf9u6cMZ3w"
-        ><img src="img/c5.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UCkRrhwhJ2Ia_ZlkTQ4XFWJA"
-        ><img src="img/c6.png" alt=""
-      /></a>
+    <div class="vid margin" data-aos="fade-right  ">
+      <iframe width="875" height="492" src="https://www.youtube.com/embed/BU1kcLA4Gok" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="vid2">
+        <h3>How Big Is Amazon?</h3>
+        <div class="line"></div>
+      </div>
     </div>
 
-    <div class="Productoins" data-aos="fade-up">
-      <h1 class="padding-2 mt-2">Crypto & Update Channels</h1>
+    <div class="vid margin" data-aos="fade-right  ">
+      <iframe width="875" height="492" src="https://www.youtube.com/embed/KJYsStJqD34" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+      <div class="vid2">
+        <h3>Inside Apple's New $5 Billion HQ</h3>
+        <div class="line"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="Productoins" data-aos="fade-up">
+    <h1 class="padding-2 mt-2">Top Channels I worked with</h1>
+    <hr />
+  </div>
+
+  <div class="channel">
+    <a href="https://www.youtube.com/c/MagnatesMedia/featured"><img src="img/c1.png" alt="" /></a>
+    <a href="https://www.youtube.com/user/arunsyadav89"><img src="img/c2.png" alt="" /></a>
+    <a href="https://www.youtube.com/channel/UCb2XyfhqioxBd9BlADBZUGQ"><img src="img/c3.png" alt="" /></a>
+  </div>
+
+  <div class="Productoins" data-aos="fade-up">
+    <h1 class="padding-2 mt-2">Luxury & Music Channels</h1>
+    <hr />
+  </div>
+
+  <div class="channel">
+    <a href="https://www.youtube.com/channel/UCU5KHiTrq0_yxrt_e24SFaQ"><img src="img/c4.png" alt="" /></a>
+    <a href="https://www.youtube.com/channel/UCcjpspS1p5VPjkf9u6cMZ3w"><img src="img/c5.png" alt="" /></a>
+    <a href="https://www.youtube.com/channel/UCkRrhwhJ2Ia_ZlkTQ4XFWJA"><img src="img/c6.png" alt="" /></a>
+  </div>
+
+  <div class="Productoins" data-aos="fade-up">
+    <h1 class="padding-2 mt-2">Crypto & Update Channels</h1>
+    <hr />
+  </div>
+
+  <div class="channel">
+    <a href="https://www.youtube.com/user/robin12214"><img src="img/c7.png" alt="" /></a>
+    <a href="https://www.youtube.com/channel/UCy-Q71bLHmSo4fj6nOjIxhg"><img src="img/c8.png" alt="" /></a>
+    <a href="https://www.youtube.com/channel/UC-7Zb6pRZXsn4GGdKOhgKOA"><img src="img/c9.png" alt="" /></a>
+  </div>
+
+  <div id="sec_last" class="xHidden">
+    <div class="titleBox" data-aos="fade-up">
+      <h1 class="padding-2 mt-2">Contact with Me</h1>
       <hr />
     </div>
 
-    <div class="channel">
-      <a href="https://www.youtube.com/user/robin12214"
-        ><img src="img/c7.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UCy-Q71bLHmSo4fj6nOjIxhg"
-        ><img src="img/c8.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UC-7Zb6pRZXsn4GGdKOhgKOA"
-        ><img src="img/c9.png" alt=""
-      /></a>
-    </div>
-
-    <div id="sec_last" class="xHidden">
-      <div class="titleBox" data-aos="fade-up">
-        <h1 class="padding-2 mt-2">Contact with Me</h1>
-        <hr />
+    <div class="contactme">
+      <div class="box-c" data-aos="fade-right">
+        <h1>Let's start working together</h1>
       </div>
 
-      <div class="contactme">
-        <div class="box-c" data-aos="fade-right">
-          <h1>Let's start working together</h1>
-        </div>
+      <form class="form_contact" id="contactForm" data-aos="fade-left">
+        <input class="input" type="text" name="" id="fName" placeholder="Full Name" required />
+        <input class="input" type="email" id="email" placeholder="Email" required />
+        <textarea class="input textarea" rows="6" placeholder="Message" id="message" required></textarea>
 
-        <form class="form_contact" data-aos="fade-left">
-          <input
-            class="input"
-            type="text"
-            name=""
-            id=""
-            placeholder="Full Name"
-          />
-          <input class="input" type="email" name="" id="" placeholder="Email" />
-          <textarea
-            class="input textarea"
-            rows="6"
-            placeholder="Message"
-          ></textarea>
-
-          <button class="submitBtn">Submit</button>
-        </form>
-      </div>
+        <button class="submitBtn">Submit</button>
+      </form>
     </div>
+  </div>
 
-    <footer class="footer xHidden">
-      <img src="./img/wave.png" alt="wave" />
-      <p>Copyright &copy; 2021 Sid</p>
-    </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="./js/hireme.js"></script>
-  </body>
+  <footer class="footer xHidden">
+    <img src="./img/wave.png" alt="wave" />
+    <p>Copyright &copy; 2021 Sid</p>
+  </footer>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="./js/hireme.js"></script>
+</body>
+
 </html>
